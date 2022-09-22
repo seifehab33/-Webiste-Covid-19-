@@ -1,0 +1,26 @@
+<div class="btns-toggle">
+          <button class="toggle-btn-open btn-open" type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button class="toggle-btn-exit btn-exit" type="button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+</div>
+let activemenu=document.getElementById('offmenu')
+let openbtn=document.querySelector('.btn-open')
+let exitbtn=document.querySelector('.btn-exit')
+openbtn.addEventListener('click',(e) =>
+{
+    activemenu.classList.toggle('active')
+    document.body.classList.toggle('bg-toggle')
+    openbtn.classList.add('none')
+    exitbtn.classList.add('show')
+    console.log(1)
+})
+exitbtn.addEventListener('click',(e) =>
+{
+    activemenu.classList.toggle('active')
+    document.body.classList.toggle('bg-toggle')
+    openbtn.classList.remove('none')
+    exitbtn.classList.remove('show')
+})
